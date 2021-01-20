@@ -30,13 +30,16 @@ Actions:
 . Invoke each audit-program.
 ===
 Dictionary: Jurisdiction vocabulary.
+. A jurisdiction is a location. (Location should be defined in the base ontology.)
 . Jurisdiction attributes include postal-codes, name, description, residents, real-estate-property, prior-elections, representatives, upper-jurisdiction. 
 . (Lower jurisdictions can be assembled by a data operation.)
 . A resident is a person. (Person is defined in the base ontology.)
 . (The terms name, description, and postal-code should be defined in the base ontology.)
 . A real-estate-property is a taxable-property.
 . Real-estate-property attributes include location. (Location is defined in the base vocabulary.)
+. Representative attributes include percent-of-vote, voting-shares-allocated. (This extended "representative" in the base ontology.)
 ===
+
 ===
 
 
