@@ -1,0 +1,9 @@
+Comment: Purpose.
+. This ontology (written in Simple English notatin) identifies the objects, actors, and business processes of the "electronic" democracy.
+===
+Dictionary: Ballot vocabulary.
+. Ballot contains a list of questions.
+. Ballot attributes include election-date, jurisdiction, ballot-status.
+. Question attributes include description, answers.
+. Answer attributes include answer-sequence, answer-text.
+. Ballot-status categories include sent, received, tallied, published.
