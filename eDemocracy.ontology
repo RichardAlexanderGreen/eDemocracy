@@ -1,5 +1,5 @@
 Comment: Purpose.
-. This ontology (written in Simple English notatin) identifies the objects, actors, and business processes of the "electronic" democracy.
+. This ontology (written in Simple English notation) identifies the objects, actors, and business processes of the "electronic" democracy.
 ===
 Dictionary: Ballot vocabulary.
 . Ballot contains a list of questions.
@@ -7,3 +7,25 @@ Dictionary: Ballot vocabulary.
 . Question attributes include description, answers.
 . Answer attributes include answer-sequence, answer-text.
 . Ballot-status categories include sent, received, tallied, published.
+===
+Goal: Election completed.
+Preconditions:
+. Ballots published on-line. 
+. Election results (tally totals) are published.
+===
+Goal: Ballots published on-line. 
+Preconditions:
+. Election dead-line is passed.
+. Ballot results are audited.
+Actions:
+. Insert ballots into online-ballot-views.
+. Insert ballot-questions into online-tally-data.
+===
+Goal: Ballot results are audited.
+Preconditions:
+. Election dead-line is passed. 
+. Ballots are in machine-readable form.
+Actions: 
+. (TBD)
+===
+
