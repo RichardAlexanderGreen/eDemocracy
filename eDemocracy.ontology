@@ -7,6 +7,7 @@ Dictionary: Ballot vocabulary.
 . Question attributes include description, answers.
 . Answer attributes include answer-sequence, answer-text.
 . Ballot-status categories include sent, received, tallied, published.
+. Election attrubutes include dead-line, issued-ballots, online-view, eligible-voters.
 ===
 Goal: Election completed.
 Preconditions:
@@ -26,6 +27,16 @@ Preconditions:
 . Election dead-line is passed. 
 . Ballots are in machine-readable form.
 Actions: 
-. (TBD)
+. Invoke each audit-program.
 ===
+Dictionary: Jurisdiction vocabulary.
+. Jurisdiction attributes include postal-codes, name, description, residents, real-estate-property, prior-elections, representatives, upper-jurisdiction. 
+. (Lower jurisdictions can be assembled by a data operation.)
+. A resident is a person. (Person is defined in the base ontology.)
+. (The terms name, description, and postal-code should be defined in the base ontology.)
+. A real-estate-property is a taxable-property.
+. Real-estate-property attributes include location. (Location is defined in the base vocabulary.)
+===
+===
+
 
