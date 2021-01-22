@@ -19,15 +19,15 @@ Preconditions:
 . Election dead-line is passed.
 . Ballot results are audited.
 Actions:
-. Insert ballots into online-ballot-views.
-. Insert ballot-questions into online-tally-data.
+. DataManager: Insert ballots into online-ballot-views.
+. DataManager: Insert ballot-questions into online-tally-data.
 ===
 Goal: Ballot results are audited.
 Preconditions:
 . Election dead-line is passed. 
 . Ballots are in machine-readable form.
 Actions: 
-. Invoke each audit-program.
+. ElectionManager: Invoke each audit-program.
 ===
 Dictionary: Jurisdiction vocabulary.
 . A jurisdiction is a location. (Location should be defined in the base ontology.)
