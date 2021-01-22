@@ -21,13 +21,16 @@ Preconditions:
 Actions:
 . DataManager: Insert ballots into online-ballot-views.
 . DataManager: Insert ballot-questions into online-tally-data.
+. (Assume each jurisdiction has its own world-base.) 
+. (Multi-jurisdiction ballots will require tally uploading.)
 ===
 Goal: Ballot results are audited.
 Preconditions:
 . Election dead-line is passed. 
 . Ballots are in machine-readable form.
 Actions: 
-. ElectionManager: Invoke each audit-program.
+. ElectionManager: Invoke each audit-program. 
+. (Audit strategies TBD.)
 ===
 Dictionary: Jurisdiction vocabulary.
 . A jurisdiction is a location. (Location should be defined in the base ontology.)
