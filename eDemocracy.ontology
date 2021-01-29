@@ -2,12 +2,20 @@ Comment: Purpose.
 . This ontology (written in Simple English notation) identifies the objects, actors, and business processes of the "electronic" democracy.
 ===
 Dictionary: Ballot vocabulary.
+. Election attributes include dead-line, ballot.
 . Ballot contains a list of questions.
-. Ballot attributes include election-date, jurisdiction, ballot-status.
-. Question attributes include description, answers.
-. Answer attributes include answer-sequence, answer-text.
-. Ballot-status categories include sent, received, tallied, published.
-. Election attrubutes include dead-line, issued-ballots, online-view, eligible-voters.
+. Ballot attributes include election-date, jurisdiction.
+. Marked-Ballot attributes include marked-questions, retrieval-identifier. 
+. Question attributes include jurisdiction, question-type, description, answers, choice-limit.
+. Question contains a list of answers.
+. Marked-question attributes include marked-answers.
+. Answer attributes include answer-text.
+. Ballot-status categories include sent, received, tallied, published. (Seems very DP oriented.)
+. Representation-question attributes include candidate-profiles.
+. Candidate-profile attributes include candidate, candidate-affiliation, profile-text.
+. Regulation-question attributes include penalty-description.
+. Future-tax-question attributes include millage, what-is-taxed.
+. What-is-taxed categories include real-estate, general-property, personal-income, sales, value-added. 
 ===
 Goal: Election completed.
 Preconditions:
@@ -42,7 +50,10 @@ Dictionary: Jurisdiction vocabulary.
 . Real-estate-property attributes include location. (Location is defined in the base vocabulary.)
 . Representative attributes include percent-of-vote, voting-shares-allocated. (This extended "representative" in the base ontology.)
 ===
-
+Goal: Marked-Question is tallied.
+Preconditions:
+. Marked-Question is valid. (Example: If only two choices are allowed, no more than two answers are marked.)
+. Marked-Question is dispatched to its jurisdiction-counter. (Jurisdiction-counter is a role.)
 ===
 
 
