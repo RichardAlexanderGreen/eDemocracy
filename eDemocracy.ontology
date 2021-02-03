@@ -4,13 +4,17 @@ Comment: Purpose.
 Dictionary: Ballot vocabulary.
 . Election attributes include dead-line, ballot.
 . Ballot contains a list of questions.
+. (A "list" is ordered, a "set" is not.)
 . Ballot attributes include election-date, jurisdiction.
 . Marked-Ballot attributes include marked-questions, retrieval-identifier. 
 . Question attributes include jurisdiction, question-type, description, answers, choice-limit.
 . Question contains a list of answers.
 . Marked-question attributes include marked-answers.
 . Answer attributes include answer-text.
-. Ballot-status categories include sent, received, tallied, published. (Seems very DP oriented.)
+. Ballot-status categories include sent-to-voter, received-from-voter, tallied, published. 
+. (Issue: Ballot-status seems to assume a database where ballots have unique-ID.)
+. (Secret Ballot: It should be possible to ID ballots and maintain a separation between voter and ballot in the database.)
+. (The voter might know the ID of the ballot they submit, but there is no relation recorded in the database.)
 . Representation-question attributes include candidate-profiles.
 . Candidate-profile attributes include candidate, candidate-affiliation, profile-text.
 . Regulation-question attributes include penalty-description.
@@ -19,6 +23,7 @@ Dictionary: Ballot vocabulary.
 ===
 Goal: Election completed.
 Preconditions:
+. (In this context "published" means that views are enabled for public use.)
 . Ballots published on-line. 
 . Election results (tally totals) are published.
 ===
@@ -27,10 +32,9 @@ Preconditions:
 . Election dead-line is passed.
 . Ballot results are audited.
 Actions:
-. DataManager: Insert ballots into online-ballot-views.
 . DataManager: Insert ballot-questions into online-tally-data.
-. (Assume each jurisdiction has its own world-base.) 
-. (Multi-jurisdiction ballots will require tally uploading.)
+. (This is very DP-like and contrary to the goal of persistence being automatic.)
+. (While persistence is automatic, statistics are not.)
 ===
 Goal: Ballot results are audited.
 Preconditions:
@@ -50,7 +54,7 @@ Dictionary: Jurisdiction vocabulary.
 . Real-estate-property attributes include location. (Location is defined in the base vocabulary.)
 . Representative attributes include percent-of-vote, voting-shares-allocated. (This extended "representative" in the base ontology.)
 ===
-Goal: Marked-Question is tallied.
+Goal: Marked-Question is tallied. (Note: This goal is at entity-level.)
 Preconditions:
 . Marked-Question is valid. (Example: If only two choices are allowed, no more than two answers are marked.)
 . Marked-Question is dispatched to its jurisdiction-counter. (Jurisdiction-counter is a role.)
