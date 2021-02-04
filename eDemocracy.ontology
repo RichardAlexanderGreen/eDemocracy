@@ -49,6 +49,7 @@ Dictionary: Jurisdiction vocabulary.
 . Jurisdiction attributes include postal-codes, name, description, residents, real-estate-property, prior-elections, representatives, upper-jurisdiction. 
 . (Lower jurisdictions can be assembled by a data operation.)
 . A resident is a person. (Person is defined in the base ontology.)
+. A voter is a resident. (A voter is an adult resident.) 
 . (The terms name, description, and postal-code should be defined in the base ontology.)
 . A real-estate-property is a taxable-property.
 . Real-estate-property attributes include location. (Location is defined in the base vocabulary.)
